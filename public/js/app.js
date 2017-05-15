@@ -7,7 +7,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', functio
         .state('airplanes', {
             url: '/',
             templateUrl: 'app/airplanes.html',
-            controller: 'AirplanesCtrl'
+            controller: 'AirplanesControllers'
         })
         .state('about', {
             url: '/airplanes/:id',
