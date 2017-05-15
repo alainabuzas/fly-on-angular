@@ -1,1 +1,7 @@
-<h1>Airplanes</h1>
+<div class="container">
+    <h1>This is the airplanes page.</h1>
+    <div ng-repeat="airplane in airplanes">
+        <a href="/airplanes/{{airplane._id}}">Learn about {{airplane.model}}
+        </a>
+    </div>
+</div>

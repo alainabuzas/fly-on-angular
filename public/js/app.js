@@ -1,4 +1,4 @@
-var app = angular.module('AirplaneApp', ['ui.router']);
+var app = angular.module('AirplaneApp', ["AirplanesControllers", 'ui.router']);
 
 app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
     $urlRouterProvider.otherwise('/404');
@@ -6,11 +6,13 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', functio
     $stateProvider
         .state('airplanes', {
             url: '/',
-            templateUrl: 'app/airplanes.html'
+            templateUrl: 'app/airplanes.html',
+            controller: 'AirplanesCtrl'
         })
         .state('about', {
-            url: '/',
-            templateUrl: 'app/about.html'
+            url: '/airplanes/:id',
+            templateUrl: 'app/about.html',
+            controller: 'AirplaneInfoCtrl'
         })
         .state('404', {
             url: '/404',

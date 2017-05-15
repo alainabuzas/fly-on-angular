@@ -1,1 +1,7 @@
-<h1>I'm an airplane!</h1>
+<div class="container">
+    <h1>This is the About Page.</h1>
+    <h2>{{ airplane.model }}</h2>
+    <img scr="{{ airplane.imgSrc }}" alt="picture of the {{ airplane.model }}">
+    <h3>Created By {{ airplane.manufacturer }}</h3>
+    <h4>Engine: {{ airplane.engines}}</h4>
+</div>
